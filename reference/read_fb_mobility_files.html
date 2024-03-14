@@ -7,7 +7,7 @@ we can uniformly apply specific formatting to columns across these files."><titl
 These files consistently contain identical columns,
 with variations only in location, day, and time.
 As a result,
-we can uniformly apply specific formatting to columns across these files."><!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
+we can uniformly apply specific formatting to columns across these files."><meta property="og:image" content="/logo.png"><!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]--></head><body>
@@ -18,7 +18,7 @@ we can uniformly apply specific formatting to columns across these files."><!-- 
     
     <a class="navbar-brand me-2" href="../index.html">quadkeyr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,7 +57,7 @@ we can uniformly apply specific formatting to columns across these files."><!-- 
 </nav><div class="container template-reference-topic">
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
-      <img src="" class="logo" alt=""><h1>Read all the .csv files in a folder and format the data.</h1>
+      <img src="../logo.png" class="logo" alt=""><h1>Read all the .csv files in a folder and format the data.</h1>
       <small class="dont-index">Source: <a href="https://github.com/Fernandez-Lab-WSU/quadkeyr/blob/HEAD/R/read_and_format_files.R" class="external-link"><code>R/read_and_format_files.R</code></a></small>
       <div class="d-none name"><code>read_fb_mobility_files.Rd</code></div>
     </div>
@@ -72,7 +72,7 @@ we can uniformly apply specific formatting to columns across these files.</p>
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">read_fb_mobility_files</span><span class="op">(</span><span class="va">path_to_csvs</span>, <span class="va">colnames</span>, <span class="va">coltypes</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">read_fb_mobility_files</span><span class="op">(</span><span class="va">path_to_csvs</span>, <span class="va">colnames</span>, <span class="va">coltypes</span>, keep_format <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -90,6 +90,12 @@ For more information go to <code><a href="https://readr.tidyverse.org/reference/
 <dd><p>Column specifications (as strings).
 See vignette("readr", package = "readr") for more details.
 documentation.</p></dd>
+
+
+<dt>keep_format</dt>
+<dd><p>Vector of column names,
+besides <code>date_time</code>, <code>day</code> and <code>quadkey</code>, that you
+don't want to convert to a number.</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -157,7 +163,7 @@ documentation.</p></dd>
 
 
     <footer><div class="pkgdown-footer-left">
-  <p></p><p>Developed by Florencia D’Andrea.</p>
+  <p></p><p>Developed by Florencia D’Andrea, Pilar Fernandez, CDC’s Center for Forecasting and Outbreak Analytics, MIDAS-NIH COVID-19 urgent grant program.</p>
 </div>
 
 <div class="pkgdown-footer-right">
